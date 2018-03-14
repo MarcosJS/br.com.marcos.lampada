@@ -7,34 +7,21 @@ public class Main {
 		
 		Lampada lamp = new Lampada();
 		
-		if(lamp.eEconomica()) {
-			System.out.println("A lâmpada é econômica!");
-		} else {
-			System.out.println("A lâmpada não é econômica!");
-		}
+		System.out.println("A lâmpada foi acesa: "+lamp.mostrarUso()+" vezes.");
 		
-		if(lamp.mostrarEstado()) {
-			System.out.println("A lâmpada está acesa!");
-		} else {
-			System.out.println("A lâmpada está apagada!");
-		}
-		
-		System.out.println("Acendendo.");
+		System.out.println("Lâmpada acesa.");
 		lamp.acenderLampada();
+		System.out.println("A lâmpada foi acesa: "+lamp.mostrarUso()+" vezes.");
 		
-		if(lamp.mostrarEstado()) {
-			System.out.println("A lâmpada está acesa!");
-		} else {
-			System.out.println("A lâmpada está apagada!");
-		}
-		
-		System.out.println("Apagando.");
+		System.out.println("Lâmpada apagada.");
 		lamp.apagarLampada();
+		System.out.println("A lâmpada foi acesa: "+lamp.mostrarUso()+" vezes.");
 		
-		if(lamp.mostrarEstado()) {
-			System.out.println("A lâmpada está acesa!");
-		} else {
-			System.out.println("A lâmpada está apagada!");
+		System.out.println("Acendendo e apagando a lâmpada varias vezes.");
+		for(int i = 0; i < 40; i++) {
+			lamp.acenderLampada();
+			lamp.apagarLampada();
 		}
+		System.out.println("A lâmpada foi acesa: "+lamp.mostrarUso()+" vezes.");
 	}
 }

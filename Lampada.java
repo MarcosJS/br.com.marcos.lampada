@@ -6,9 +6,11 @@ public class Lampada {
 	
 	private boolean estadoLampada;
 	private int watts = 40;
+	Contador acesa = new Contador();
 	
 	void acenderLampada() {
 		estadoLampada = true;
+		acesa.incrementarEventos();
 	}
 	
 	void apagarLampada() {
@@ -27,5 +29,9 @@ public class Lampada {
 			economica = true;
 		}
 		return economica;
+	}
+	
+	int mostrarUso() {
+		return acesa.getEventos();
 	}
 }
